@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        padding: 20px;
+        min-height: 100vh;
+        direction: rtl;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: auto;
+        background: #fff;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .button {
+        display: inline-block;
+        padding: 12px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        color: #fff !important;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      @media only screen and (max-width: 600px) {
+        .container {
+          margin: 10px;
+          border-radius: 10px;
+        }
+
+        .content {
+          padding: 20px !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">{{content}}</div>
+  </body>
+</html>
