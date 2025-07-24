@@ -57,7 +57,7 @@ export default function RootLayout({
     <html
       lang="ar"
       dir="rtl"
-      className={`${cairo.variable} ${tajawal.variable}`}
+      className={`${cairo.variable} ${tajawal.variable} overflow-x-hidden`}
     >
       <head>
         <Script
