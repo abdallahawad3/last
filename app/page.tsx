@@ -1,4 +1,5 @@
 "use client";
+import Navbar from "@/components/header/Navbar";
 import HotContact from "@/components/HotContact";
 import Loader from "@/components/Loading/Loader";
 import AboutUs from "@/sections/About";
@@ -15,6 +16,7 @@ export default function Home() {
       {loading && <Loader onFinish={() => setLoading(false)} />}
       {!loading && (
         <>
+          <Navbar />
           <Hero />
           <main className=" ">
             <OurServices />

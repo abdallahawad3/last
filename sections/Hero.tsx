@@ -54,10 +54,10 @@ const Hero = () => {
       </div>
       {/* Content */}
       <div className="relative z-10 max-w-3xl px-6">
-        <h1 className="hero-title text-4xl md:text-5xl font-bold text-center mb-4">
+        <h1 className="hero-title text-4xl md:text-6xl font-bold text-center mb-4 text-light">
           نبني لك منزل أحلامك من الأساسات إلى التشطيب الكامل
         </h1>
-        <p className="hero-text text-lg md:text-xl font-body mb-6">
+        <p className="hero-text text-lg md:text-xl font-body mb-6 text-light/80 text-center">
           خبرة أكثر من 15 سنة في مجال البناء والتطوير العقاري مع تنفيذ مشاريع
           بجودة عالية وتشطيبات فاخرة.
         </p>

@@ -32,12 +32,12 @@ export default function AboutUs() {
   }, []);
 
   return (
-    <section className="about-section py-40 bg-primary text-secondary flex items-center">
+    <section className="about-section py-40 bg-primary text-light flex items-center">
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* النص */}
         <SlideIn from="right">
           <div className="about-text">
-            <h2 className="text-4xl  font-bold text-secondary mb-6">من نحن</h2>
+            <h2 className="text-4xl  font-bold text-light mb-6">من نحن</h2>
             <p className="text-lg font-body leading-relaxed mb-6">
               نحن شركة رائدة في مجال المقاولات والبناء في جدة ومكة، نقدم خدمات
               متكاملة تشمل البناء من مرحلة العظم وحتى التشطيبات والديكورات،
