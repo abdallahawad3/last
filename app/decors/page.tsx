@@ -3,23 +3,18 @@ import Image from "next/image";
 import { useState } from "react";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
-import img1 from "../../public/maintenance/1.webp";
-import img2 from "../../public/maintenance/2.webp";
-import img3 from "../../public/maintenance/3.webp";
-import img4 from "../../public/maintenance/4.webp";
-import img5 from "../../public/maintenance/5.webp";
-import img6 from "../../public/maintenance/6.webp";
-import img7 from "../../public/maintenance/7.webp";
+import img1 from "../../public/docors/1.webp";
+import img2 from "../../public/docors/2.webp";
+import img3 from "../../public/docors/3.webp";
+import img4 from "../../public/docors/4.webp";
+import img5 from "../../public/docors/5.webp";
+import img6 from "../../public/docors/6.webp";
+import img7 from "../../public/docors/7.webp";
+import img8 from "../../public/docors/8.webp";
+import img9 from "../../public/docors/9.webp";
+import img10 from "../../public/docors/10.webp";
 
 const images = [
-  {
-    original: img1.src,
-    thumbnail: img1.src,
-  },
-  {
-    original: img2.src,
-    thumbnail: img2.src,
-  },
   {
     original: img3.src,
     thumbnail: img3.src,
@@ -27,6 +22,14 @@ const images = [
   {
     original: img4.src,
     thumbnail: img4.src,
+  },
+  {
+    original: img9.src,
+    thumbnail: img9.src,
+  },
+  {
+    original: img10.src,
+    thumbnail: img10.src,
   },
   {
     original: img5.src,
@@ -39,6 +42,18 @@ const images = [
   {
     original: img7.src,
     thumbnail: img7.src,
+  },
+  {
+    original: img8.src,
+    thumbnail: img8.src,
+  },
+  {
+    original: img1.src,
+    thumbnail: img1.src,
+  },
+  {
+    original: img2.src,
+    thumbnail: img2.src,
   },
 ];
 
@@ -54,12 +69,13 @@ const GalleryPage = () => {
   return (
     <main>
       <div className="text-center bg-primary text-light py-10 md:py-32">
-        <h1 className="text-2xl md:text-5xl font-bold mb-4">ترميم وصيانة</h1>
+        <h1 className="text-2xl md:text-5xl font-bold mb-4">ديكورات</h1>
         <p className="text-lg  max-w-[70%] mx-auto ">
-          تقوم مؤسستنا بإعمال ترميم والصيانة للمنازل والفلل والمنتزهات والحدائق
-          بكافة أشكالها وانواعها المختلفة كما لدينا القدرة علي تنفيذ جميع إعمال
-          السباكة للمباني الجديدة وعمل الصيانة للمباني القديمة وعمل برامج صيانة
-          دورية بإشراف فريق عمل متكامل من امهر الفنيين والمهندسين.
+          تقوم مؤسسنقدم خدمات الديكورات الداخلية والخارجية لتحويل المساحات إلى
+          أماكن مبهرة وفريدة من نوعها. تشمل خدماتنا تصميم وتركيب الديكورات
+          الجبسية، وتنسيق الألوان، واختيار الأثاث والإضاءة، وتقديم حلول مبتكرة
+          تلبي رغبات العملاء. نعمل على تحقيق التوازن بين الجمال والوظيفة
+          باستخدام أفضل المواد وأحدث التقنيات.
         </p>
         <div className="flex justify-center mt-4">
           <button className="flex items-center text-green-600 font-heading hover:underline transition-all bg-green-50 px-4 py-2 rounded-lg hover:bg-green-100">

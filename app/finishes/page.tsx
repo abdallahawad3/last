@@ -96,7 +96,7 @@ const GalleryPage = () => {
         {images.map((img, index) => (
           <div
             key={index}
-            className="cursor-pointer overflow-hidden rounded-lg shadow-lg hover:scale-105 transition-transform"
+            className="cursor-pointer overflow-hidden rounded-lg shadow-lg hover:scale-101 transition-transform"
             onClick={() => openGallery(index)}
           >
             <Image
