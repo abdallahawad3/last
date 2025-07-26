@@ -78,3 +78,13 @@ body {
 .portfolio-card {
   transition: none !important; /* Prevent Tailwind transitions */
 }
+
+.image-gallery {
+  direction: rtl; /* يخلي السلايدر RTL */
+}
+
+.image-gallery-thumbnails-container {
+  display: flex !important;
+  flex-direction: row-reverse !important; /* يخلي الصور المصغّرة تبدأ من اليمين */
+  gap: 0 !important; /* يمنع أي مسافات إضافية */
+}
