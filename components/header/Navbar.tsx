@@ -131,7 +131,7 @@ const Navbar = () => {
       {menuOpen && (
         <div
           ref={menuRef}
-          className="md:hidden bg-primary border-t shadow-lg overflow-hidden"
+          className="md:hidden bg-primary border-t overflow-hidden"
         >
           {services.map((service) => (
             <Link
