@@ -5,56 +5,51 @@ import Image from "next/image";
 import { FadeIn } from "@/components/animation/FadeIn";
 import { SlideIn } from "@/components/animation/SlideIn";
 import { StaggerList } from "@/components/animation/StaggerList";
+import Link from "next/link";
 
 export default function OurServices() {
   const services = [
-    {
-      title: "مقاولات عامة",
-      desc: "تنفيذ مشاريع البناء الكاملة من البداية للنهاية",
-      img: "/services/architecture.webp",
-      icon: "🏢",
-    },
     {
       title: "بناء عظم",
       desc: "إنشاء الهيكل الإنشائي بجودة هندسية عالية",
       img: "/services/construction.webp",
       icon: "🧱",
+      link: "/bone-building",
     },
     {
       title: "ترميم وصيانة",
       desc: "إصلاح وتجديد المباني القديمة بأحدث الأساليب",
       img: "/services/repair.webp",
       icon: "🛠️",
+      link: "/maintenance",
     },
     {
       title: "تشطيبات",
       desc: "تنفيذ أعمال التشطيب الداخلي باحترافية",
       img: "/services/finishing.webp",
       icon: "🏠",
+      link: "/finishes",
     },
     {
       title: "ديكورات",
       desc: "تصميم وتنفيذ ديكورات عصرية للمنازل والمكاتب",
       img: "/services/decor.webp",
       icon: "🎨",
+      link: "/decors",
     },
     {
       title: "مظلات",
       desc: "تركيب مظلات للحدائق والسيارات بجودة عالية",
       img: "/services/shade.webp",
       icon: "⛱️",
-    },
-    {
-      title: "سواتر",
-      desc: "تركيب سواتر خصوصية وأمان للمنازل والمنشآت",
-      img: "/services/walls.webp",
-      icon: "🧱",
+      link: "/awnings",
     },
     {
       title: "برجولات",
       desc: "تصميم وتنفيذ برجولات خشبية وحديدية أنيقة",
       img: "/services/pergola.webp",
       icon: "🌿",
+      link: "/pergolas",
     },
   ];
 
@@ -107,7 +102,7 @@ export default function OurServices() {
                 <p className="font-body text-secondary">{service.desc}</p>
                 <div>
                   <button className="my-4 px-6 py-2 bg-accent text-white rounded-full hover:bg-accent-dark transition hover:bg-secondary">
-                    تعرف على المزيد
+                    <Link href={service.link}>تعرف على المزيد</Link>
                   </button>
                 </div>
               </div>
