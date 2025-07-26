@@ -2,6 +2,7 @@ import Script from "next/script";
 import "./globals.css";
 import { Cairo, Tajawal } from "next/font/google";
 import Navbar from "@/components/header/Navbar";
+import Footer from "@/sections/Footer";
 
 const cairo = Cairo({
   subsets: ["arabic"],
@@ -95,6 +96,7 @@ export default function RootLayout({
       <body className={`overflow-x-hidden`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -1,8 +1,3 @@
-"use client";
-import Image from "next/image";
-import { useState } from "react";
-import ImageGallery from "react-image-gallery";
-import "react-image-gallery/styles/css/image-gallery.css";
 import img1 from "../../public/pergolas/1.webp";
 import img2 from "../../public/pergolas/2.webp";
 import img3 from "../../public/pergolas/3.webp";
@@ -10,6 +5,9 @@ import img4 from "../../public/pergolas/4.webp";
 import img5 from "../../public/pergolas/5.webp";
 import img6 from "../../public/pergolas/6.webp";
 import img7 from "../../public/pergolas/7.webp";
+import Slider from "@/components/ImageSlider/Slider";
+import { Metadata } from "next";
+
 const images = [
   {
     original: img1.src,
@@ -41,21 +39,64 @@ const images = [
   },
 ];
 
-const GalleryPage = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [startIndex, setStartIndex] = useState(0);
-
-  const openGallery = (index: number) => {
-    setStartIndex(index);
-    setIsOpen(true);
-  };
-
+export const metadata: Metadata = {
+  title: "البرجولات | تصميم وتنفيذ برجولات خارجية",
+  description:
+    "نقدم خدمات تصميم وتنفيذ البرجولات الخشبية والحديدية وبرجولات اللكسان والقماش والمظلات والجلسات الخارجية للحدائق والسطوح بجودة عالية وخبرة متميزة في جميع أنحاء المملكة.",
+  keywords: [
+    "برجولات",
+    "تصميم برجولات",
+    "تنفيذ برجولات",
+    "برجولات خشبية",
+    "برجولات حديدية",
+    "برجولات لكسان",
+    "برجولات قماش",
+    "مظلات",
+    "جلسات خارجية",
+    "حدائق",
+    "سطوح",
+    "جلسات حدائق",
+    "مظلات حدائق",
+    "مظلات سيارات",
+    "ديكورات خارجية",
+    "تصميم حدائق",
+    "تنفيذ جلسات",
+    "جلسات سطح",
+    "جلسات خارجية مودرن",
+    "برجولات حديثة",
+    "برجولات مودرن",
+    "برجولات الرياض",
+    "برجولات جدة",
+    "برجولات الدمام",
+    "برجولات السعودية",
+  ],
+  openGraph: {
+    title: "البرجولات | تصميم وتنفيذ برجولات خارجية",
+    description:
+      "خدمات متكاملة لتصميم وتنفيذ البرجولات والمظلات والجلسات الخارجية للحدائق والسطوح بجودة عالية وخبرة واسعة في جميع أنحاء المملكة.",
+    url: "https://your-domain.com/pergolas",
+    type: "website",
+    images: [
+      {
+        url: "/maintenance/1.webp",
+        width: 1200,
+        height: 630,
+        alt: "برجولات خارجية",
+      },
+    ],
+    locale: "ar_SA",
+    siteName: "ديكور السعودية",
+  },
+};
+const page = () => {
   return (
     <main>
-      <div className="text-center bg-primary text-light py-10 md:py-32">
-        <h1 className="text-2xl md:text-5xl font-bold mb-4">البرجولات</h1>
-        <p className="text-lg  max-w-[70%] mx-auto ">
-          نقدم خدمات تصميم وثنفيذ البرجولات لتوفير مساحات خارجية مريحة وجذابة،
+      <div className="text-center bg-primary text-light py-20 md:pb-40 md:pt-52">
+        <h1 className="masked-text text-2xl md:text-5xl font-bold mb-4">
+          البرجولات
+        </h1>
+        <p className="text-lg max-w-[70%] mx-auto">
+          نقدم خدمات تصميم وتنفيذ البرجولات لتوفير مساحات خارجية مريحة وجذابة،
           تشمل خدماتنا البرجولات الخشبية والحديدية وبرجولات اللكسان والقماش
           ومظلات والجلسات لاماكن الجلسات الخارجية والحدائق والاحواش والسطوح.
         </p>
@@ -72,64 +113,9 @@ const GalleryPage = () => {
           </button>
         </div>
       </div>
-      {/* شبكة الصور */}
-      <div className="container !py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <h2 className="col-span-full flex items-center justify-center gap-2 flex-col text-center text-2xl md:text-5xl font-bold mb-4">
-          شاهد اعمالنا​
-          <span className="block">
-            <svg
-              aria-hidden="true"
-              className="w-12"
-              viewBox="0 0 640 512"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M608 0H160a32 32 0 0 0-32 32v96h160V64h192v320h128a32 32 0 0 0 32-32V32a32 32 0 0 0-32-32zM232 103a9 9 0 0 1-9 9h-30a9 9 0 0 1-9-9V73a9 9 0 0 1 9-9h30a9 9 0 0 1 9 9zm352 208a9 9 0 0 1-9 9h-30a9 9 0 0 1-9-9v-30a9 9 0 0 1 9-9h30a9 9 0 0 1 9 9zm0-104a9 9 0 0 1-9 9h-30a9 9 0 0 1-9-9v-30a9 9 0 0 1 9-9h30a9 9 0 0 1 9 9zm0-104a9 9 0 0 1-9 9h-30a9 9 0 0 1-9-9V73a9 9 0 0 1 9-9h30a9 9 0 0 1 9 9zm-168 57H32a32 32 0 0 0-32 32v288a32 32 0 0 0 32 32h384a32 32 0 0 0 32-32V192a32 32 0 0 0-32-32zM96 224a32 32 0 1 1-32 32 32 32 0 0 1 32-32zm288 224H64v-32l64-64 32 32 128-128 96 96z"></path>
-            </svg>
-          </span>
-        </h2>
-        {images.map((img, index) => (
-          <div
-            key={index}
-            className="cursor-pointer overflow-hidden rounded-lg shadow-lg hover:scale-101 transition-transform"
-            onClick={() => openGallery(index)}
-          >
-            <Image
-              src={img.original}
-              alt={`Image ${index + 1}`}
-              className="w-full h-60 object-cover"
-              width={1000}
-              height={600}
-            />
-          </div>
-        ))}
-      </div>
-
-      {/* المودال (Overlay) */}
-      {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center ">
-          <button
-            onClick={() => setIsOpen(false)}
-            className="absolute top-4 right-4 text-white text-3xl font-bold z-50"
-          >
-            ✕
-          </button>
-          <div className="w-full max-w-5xl p-4">
-            <ImageGallery
-              items={images}
-              showBullets={true}
-              startIndex={startIndex}
-              showNav={true}
-              showThumbnails={true}
-              showIndex={true}
-              showFullscreenButton={false}
-              showPlayButton={false}
-              onSlide={(currentIndex) => setStartIndex(currentIndex)}
-            />
-          </div>
-        </div>
-      )}
+      <Slider images={images} />
     </main>
   );
 };
 
-export default GalleryPage;
+export default page;

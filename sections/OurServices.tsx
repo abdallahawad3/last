@@ -96,8 +96,10 @@ export default function OurServices() {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-2xl text-light mb-3">{service.title}</h3>
-                <p className="font-body text-light">{service.desc}</p>
+                <h3 className="text-2xl text-background mb-3">
+                  {service.title}
+                </h3>
+                <p className="font-body text-background">{service.desc}</p>
                 <div>
                   <button className="my-4 px-6 py-2 bg-accent text-white rounded-full hover:bg-accent-dark transition hover:bg-secondary">
                     <Link href={service.link}>تعرف على المزيد</Link>

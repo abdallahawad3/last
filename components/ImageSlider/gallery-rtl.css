@@ -1,0 +1,27 @@
+.image-gallery-content {
+  direction: rtl;
+}
+
+.image-gallery-slide-wrapper,
+.image-gallery-thumbnails-wrapper {
+  transform: scaleX(-1); /* يقلب السلايدر */
+}
+
+.image-gallery-slide-wrapper .image-gallery-slide,
+.image-gallery-thumbnails-wrapper .image-gallery-thumbnail {
+  transform: scaleX(-1); /* يرجّع الصور للوضع الطبيعي */
+}
+/* تحديد أقصى ارتفاع للصور داخل السلايدر */
+.image-gallery-content .image-gallery-slide img {
+  max-height: 550px !important; /* أو أي ارتفاع تريده */
+  width: 100% !important;
+  object-fit: cover !important; /* يمنع تمدد الصورة */
+  margin: 0 auto; /* لتوسيط الصورة */
+}
+
+/* نفس الأمر للصور المصغرة إذا لزم الأمر */
+.image-gallery-thumbnail img {
+  max-height: 80px;
+  width: auto;
+  object-fit: cover;
+}

@@ -1,8 +1,3 @@
-"use client";
-import Image from "next/image";
-import { useState } from "react";
-import ImageGallery from "react-image-gallery";
-import "react-image-gallery/styles/css/image-gallery.css";
 import img1 from "../../public/bouns/1.jpeg";
 import img2 from "../../public/bouns/2.jpeg";
 import img3 from "../../public/bouns/3.jpeg";
@@ -10,6 +5,7 @@ import img4 from "../../public/bouns/4.jpeg";
 import img5 from "../../public/bouns/5.jpeg";
 import img6 from "../../public/bouns/6.jpeg";
 import img7 from "../../public/bouns/7.jpeg";
+import Slider from "@/components/ImageSlider/Slider";
 const images = [
   {
     original: img1.src,
@@ -41,19 +37,95 @@ const images = [
   },
 ];
 
-const GalleryPage = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [startIndex, setStartIndex] = useState(0);
+export const metadata = {
+  title: "بناء عظم في جدة ومكة | مؤسسة مقاولات",
+  description:
+    "خدمات بناء عظم وتشطيبات عالية الجودة في جدة ومكة. تنفيذ جميع أعمال البناء والإنشاء من الحفر حتى التشطيب بواسطة فريق محترف ومعلمين خبرة.",
+  keywords: [
+    "بناء عظم",
+    "مقاول بناء",
+    "تشطيبات",
+    "جدة",
+    "مكة",
+    "مقاولات",
+    "انشاءات",
+    "ملاحق",
+    "عمائر",
+    "مباني",
+    "مقاول عظم",
+    "مقاول تشطيب",
+    "مقاول فلل",
+    "مقاول منازل",
+    "مقاول مشاريع",
+    "بناء فلل",
+    "بناء منازل",
+    "بناء مشاريع",
+    "مقاولات عامة",
+    "مقاول سعودي",
+    "مقاول جدة",
+    "مقاول مكة",
+    "مؤسسة مقاولات",
+    "مقاولات جدة",
+    "مقاولات مكة",
+    "ترميم مباني",
+    "ترميم منازل",
+    "ترميم فلل",
+    "بناء حديث",
+    "بناء مستودعات",
+    "بناء مصانع",
+    "مقاول ترميم",
+    "مقاول بناء عظم",
+    "مقاول بناء تشطيب",
+    "معلمين بناء",
+    "معلمين عظم",
+    "معلمين تشطيب",
+    "معلمين محترفين",
+    "معلمين خبرة",
+  ],
+  openGraph: {
+    title: "بناء عظم في جدة ومكة | مؤسسة مقاولات",
+    description:
+      "ننفذ جميع أعمال بناء العظم والتشطيبات في جدة ومكة بجودة عالية وخبرة طويلة ومعلمين محترفين.",
+    locale: "ar_SA",
+    type: "website",
+    images: [
+      {
+        url: img5.src,
+        width: 1200,
+        height: 630,
+        alt: "بناء عظم في جدة ومكة",
+      },
+    ],
+  },
+  facebook: {
+    title: "بناء عظم في جدة ومكة | مؤسسة مقاولات",
+    description:
+      "نقدم خدمات بناء العظم والتشطيبات في جدة ومكة بجودة عالية وبأسعار تنافسية. اتصل بنا الآن للحصول على استشارة مجانية.",
+    images: [img5.src],
+  },
+  twitter: {
+    title: "بناء عظم في جدة ومكة | مؤسسة مقاولات",
+    description:
+      "خدمات بناء عظم وتشطيبات عالية الجودة في جدة ومكة. تنفيذ جميع أعمال البناء والإنشاء من الحفر حتى التشطيب بواسطة فريق محترف ومعلمين خبرة.",
+    card: "summary_large_image",
+    images: [img5.src],
+  },
+  alternates: {
+    canonical: "https://last-sepia-eight.vercel.app/bone-building",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
-  const openGallery = (index: number) => {
-    setStartIndex(index);
-    setIsOpen(true);
-  };
-
+const page = () => {
   return (
     <main>
-      <div className="text-center bg-primary text-light py-10 md:py-32">
-        <h1 className="text-2xl md:text-5xl font-bold mb-4">بناء عظم</h1>
+      <div className="text-center bg-primary text-light py-20 md:pb-40 md:pt-52">
+        <h1 className="masked-text text-2xl md:text-5xl font-bold mb-4">
+          بناء عظم
+        </h1>
         <p className="text-lg md:text-2xl max-w-[70%] mx-auto ">
           تقوم مؤسستنا بتنفيذ أعمال البناء من اشغال العظم والتشطيبات بجوده عاليه
           وبجميع أعمال البناء والانشاء ابتداءً من اعمال الحفر والردم وإنشاء
@@ -74,64 +146,9 @@ const GalleryPage = () => {
           </button>
         </div>
       </div>
-      {/* شبكة الصور */}
-      <div className="container !py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <h2 className="col-span-full flex items-center justify-center gap-2 flex-col text-center text-2xl md:text-5xl font-bold mb-4">
-          شاهد اعمالنا​
-          <span className="block">
-            <svg
-              aria-hidden="true"
-              className="w-12"
-              viewBox="0 0 640 512"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M608 0H160a32 32 0 0 0-32 32v96h160V64h192v320h128a32 32 0 0 0 32-32V32a32 32 0 0 0-32-32zM232 103a9 9 0 0 1-9 9h-30a9 9 0 0 1-9-9V73a9 9 0 0 1 9-9h30a9 9 0 0 1 9 9zm352 208a9 9 0 0 1-9 9h-30a9 9 0 0 1-9-9v-30a9 9 0 0 1 9-9h30a9 9 0 0 1 9 9zm0-104a9 9 0 0 1-9 9h-30a9 9 0 0 1-9-9v-30a9 9 0 0 1 9-9h30a9 9 0 0 1 9 9zm0-104a9 9 0 0 1-9 9h-30a9 9 0 0 1-9-9V73a9 9 0 0 1 9-9h30a9 9 0 0 1 9 9zm-168 57H32a32 32 0 0 0-32 32v288a32 32 0 0 0 32 32h384a32 32 0 0 0 32-32V192a32 32 0 0 0-32-32zM96 224a32 32 0 1 1-32 32 32 32 0 0 1 32-32zm288 224H64v-32l64-64 32 32 128-128 96 96z"></path>
-            </svg>
-          </span>
-        </h2>
-        {images.map((img, index) => (
-          <div
-            key={index}
-            className="cursor-pointer overflow-hidden rounded-lg shadow-lg hover:scale-101 transition-transform"
-            onClick={() => openGallery(index)}
-          >
-            <Image
-              src={img.original}
-              alt={`Image ${index + 1}`}
-              className="w-full h-60 object-cover"
-              width={1000}
-              height={600}
-            />
-          </div>
-        ))}
-      </div>
-
-      {/* المودال (Overlay) */}
-      {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center ">
-          <button
-            onClick={() => setIsOpen(false)}
-            className="absolute top-4 right-4 text-white text-3xl font-bold z-50"
-          >
-            ✕
-          </button>
-          <div className="w-full max-w-5xl p-4">
-            <ImageGallery
-              items={images}
-              showBullets={true}
-              startIndex={startIndex}
-              showNav={true}
-              showThumbnails={true}
-              showIndex={true}
-              showFullscreenButton={false}
-              showPlayButton={false}
-              onSlide={(currentIndex) => setStartIndex(currentIndex)}
-            />
-          </div>
-        </div>
-      )}
+      <Slider images={images} />
     </main>
   );
 };
 
-export default GalleryPage;
+export default page;

@@ -6,11 +6,11 @@
   --foreground: #01312d;
 
   /* Custom Green Palette */
-  --color-primary: #01312d;
-  --color-secondary: #3a7717;
-  --color-accent: #72bf00;
-  --color-light: #bff202;
-  --color-background: #eafde7;
+  --color-primary: #002147; /* Dark, deep blue - replaces your dark green */
+  --color-secondary: #2a52be; /* Medium blue - replaces your medium green */
+  --color-accent: #4682b4; /* Steel blue/lighter blue - replaces your brighter green */
+  --color-light: #87cefa; /* Light sky blue - replaces your yellow-green */
+  --color-background: #e0f2f7; /* Very light blue/off-white with a blue tint - replaces your light background */
 
   /* Fonts */
   --font-heading: "Cairo", sans-serif;
@@ -56,7 +56,7 @@ button {
 }
 /* Global Styles */
 body {
-  background: var(--background);
+  background: var(--color-background);
   color: var(--foreground);
   font-family: var(--font-body);
   height: 100%;
@@ -87,4 +87,19 @@ body {
   display: flex !important;
   flex-direction: row-reverse !important; /* يخلي الصور المصغّرة تبدأ من اليمين */
   gap: 0 !important; /* يمنع أي مسافات إضافية */
+}
+h1.masked-text {
+  font-size: 5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-align: center;
+  background: url("https://i.pinimg.com/1200x/3f/6c/0a/3f6c0abdfac072f6bc5c964182579276.jpg")
+    no-repeat center center;
+  background-size: cover;
+  letter-spacing: 2;
+  line-height: 1.4;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }

@@ -67,12 +67,12 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex gap-6 text-light font-medium font-body">
+        <nav className="hidden md:flex gap-6 text-background font-medium font-body">
           {services.map((service) => (
             <Link
               key={service.link}
               href={service.link}
-              className="hover:text-light/80 transition"
+              className="hover:text-background/80 transition"
             >
               {service.title}
             </Link>
