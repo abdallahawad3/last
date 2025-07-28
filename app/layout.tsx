@@ -3,7 +3,7 @@ import "./globals.css";
 import { Cairo, Tajawal } from "next/font/google";
 import Navbar from "@/components/header/Navbar";
 import Footer from "@/sections/Footer";
-import img from "/public/maintenance/1.webp";
+// import img from "/maintenance/1.webp";
 const cairo = Cairo({
   subsets: ["arabic"],
   weight: ["600", "700"], // Headings
@@ -113,13 +113,13 @@ export const metadata = {
     siteName: "سيف تاورز",
     images: [
       {
-        url: img.src,
+        url: "/maintenance/1.webp",
         width: 1200,
         height: 630,
         alt: "شركة المقاولات والبناء في جدة ومكة",
       },
       {
-        url: img.src,
+        url: "/maintenance/1.webp",
         width: 800,
         height: 600,
         alt: "خدمات التشطيب والترميم",
@@ -133,7 +133,7 @@ export const metadata = {
     site: "@Abdullah1173707", // يمكن حذفه أو تحديثه
     title: "شركة المقاولات والبناء في جدة ومكة",
     description: "خدمات بناء وتشطيب وترميم وديكورات في جدة ومكة. اتصل الآن!",
-    images: [img.src],
+    images: ["/maintenance/1.webp"],
   },
   robots: {
     index: true,
