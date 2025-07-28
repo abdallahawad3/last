@@ -3,6 +3,7 @@ import "./globals.css";
 import { Cairo, Tajawal } from "next/font/google";
 import Navbar from "@/components/header/Navbar";
 import Footer from "@/sections/Footer";
+import Head from "next/head";
 // import img from "/maintenance/1.webp";
 const cairo = Cairo({
   subsets: ["arabic"],
@@ -167,14 +168,14 @@ export default function RootLayout({
       dir="rtl"
       className={`${cairo.variable} ${tajawal.variable} overflow-x-hidden`}
     >
-      <head>
+      <Head>
         <meta
           name="google-site-verification"
           content="Jx1E_lNm6JjmcGWfUUiC0eWdAcYP6bJEaJRWEAvAdOM"
         />
         {/* PWA Manifest */}
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#0d9488" />
+        <meta name="theme-color" content="#000245" />
 
         {/* iOS PWA Support */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -183,7 +184,17 @@ export default function RootLayout({
           content="black-translucent"
         />
         <meta name="apple-mobile-web-app-title" content="سيف تاورز" />
-        <link rel="apple-touch-icon" href="/icons/apple-icon-180.png" />
+        <link rel="apple-touch-icon" href="/180.png" />
+        {/* Android PWA Support */}
+        <meta name="android-mobile-web-app-capable" content="yes" />
+        <meta
+          name="android-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://last-sepia-eight.vercel.app" />
+        <link rel="icon" href="/logo.ico" />
+
         <Script
           id="local-business-schema"
           type="application/ld+json"
@@ -213,7 +224,7 @@ export default function RootLayout({
             }),
           }}
         />
-      </head>
+      </Head>
 
       <body className="overflow-x-hidden">
         <Navbar />
