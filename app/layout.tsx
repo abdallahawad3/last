@@ -3,6 +3,7 @@ import "./globals.css";
 import { Cairo, Tajawal } from "next/font/google";
 import Navbar from "@/components/header/Navbar";
 import Footer from "@/sections/Footer";
+import img from "/maintenance/1.webp";
 const cairo = Cairo({
   subsets: ["arabic"],
   weight: ["600", "700"], // Headings
@@ -16,15 +17,12 @@ const tajawal = Tajawal({
   variable: "--font-body",
   display: "swap",
 });
-const img = {
-  src: "https://last-sepia-eight.vercel.app/logo.png",
-};
 
 export const metadata = {
   metadataBase: new URL("https://last-sepia-eight.vercel.app"),
-  title: "شركة المقاولات والبناء في جدة ومكة | بناء عظم وتشطيبات",
+  title: `سيف تاورز | شركة المقاولات في جدة ومكة | بناء عظم وتشطيبات وترميم وديكورات ومظلات وبرجولات`,
   description:
-    "نقدم جميع خدمات المقاولات العامة، بناء العظم، التشطيبات، الترميم والديكورات في جدة ومكة بخبرة أكثر من 15 سنة. اتصل الآن للحصول على أفضل خدمات المقاولات، تشطيب الفلل، ترميم المنازل، أعمال الديكور، مظلات، برجولات، صيانة، كهرباء وسباكة في جدة ومكة.",
+    "خدمات بناء عظم، تشطيبات، ترميم، ديكورات، مظلات وبرجولات في جدة ومكة. استشارة مجانية وعروض أسعار تنافسية.",
   keywords: [
     "مقاولات جدة",
     "مقاولات مكة",
@@ -73,6 +71,16 @@ export const metadata = {
     "مقاول أعمال واجهات",
     "مقاول أعمال مسابح",
     "مقاول أعمال حدائق",
+    "معلم جبسمبورد",
+    "لياسة",
+    "دهان",
+    "معلم سيراميك",
+    "معلم عزل",
+    "مصمم داخلي",
+    "معلم جبس مغربي",
+    "برجولات",
+    "شركة ترميم وتشطيب",
+    "معلم رخام",
     "مقاول أعمال صيانة",
     "مقاول أعمال ترميم",
     "مقاول أعمال تشطيب",
@@ -97,9 +105,10 @@ export const metadata = {
     canonical: "https://last-sepia-eight.vercel.app",
   },
   openGraph: {
-    title: "شركة المقاولات في جدة ومكة | بناء عظم وتشطيبات",
+    title:
+      "سيف تاورز | شركة المقاولات في جدة ومكة | بناء عظم وتشطيبات وترميم وديكورات ومظلات وبرجولات",
     description:
-      "خدمات بناء وتشطيب وترميم وديكورات في جدة ومكة بخبرة طويلة. اتصل بنا الآن للحصول على أفضل الأسعار والجودة.",
+      "سيف تاورز تقدم خدمات المقاولات العامة في جدة ومكة: بناء عظم، تشطيبات، ترميم، ديكورات، مظلات، برجولات، وأكثر. اتصل بنا لاستشارة مجانية.",
     url: "https://last-sepia-eight.vercel.app",
     siteName: "سيف تاورز",
     images: [
@@ -159,6 +168,18 @@ export default function RootLayout({
       className={`${cairo.variable} ${tajawal.variable} overflow-x-hidden`}
     >
       <head>
+        {/* PWA Manifest */}
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#0d9488" />
+
+        {/* iOS PWA Support */}
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
+        <meta name="apple-mobile-web-app-title" content="سيف تاورز" />
+        <link rel="apple-touch-icon" href="/icons/apple-icon-180.png" />
         <Script
           id="local-business-schema"
           type="application/ld+json"
@@ -168,7 +189,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "سيف تاورز",
-              image: "https://last-sepia-eight.vercel.app/logo.png", // تأكد من صحة الرابط
+              image: "https://last-sepia-eight.vercel.app/logo.png",
               "@id": "https://last-sepia-eight.vercel.app",
               url: "https://last-sepia-eight.vercel.app",
               telephone: "+966501234567",
@@ -177,7 +198,7 @@ export default function RootLayout({
                 streetAddress: "جبل النور - شارع حسين سرحان",
                 addressLocality: "مكة",
                 addressRegion: "مكة المكرمة",
-                postalCode: "21955", // رمز بريدي تقريبي لجبل النور - يمكن تعديله إن وُجد أدق
+                postalCode: "21955",
                 addressCountry: "SA",
               },
               areaServed: [

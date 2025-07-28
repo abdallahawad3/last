@@ -1,21 +1,31 @@
 {
-  "name": "شركة المقاولات",
-  "short_name": "مقاولات",
+  "name": "سيف تاورز",
+  "short_name": "سيف",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#e0f2f7",
   "theme_color": "#0d9488",
   "description": "خدمات مقاولات عامة في جدة ومكة",
+  "lang": "ar",
+  "dir": "rtl",
   "icons": [
     {
-      "src": "/logo.png",
+      "src": "/192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/logo.png",
+      "src": "/512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "/180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
