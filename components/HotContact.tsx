@@ -42,13 +42,14 @@ const HotContact = () => {
         style={{ height: 0, opacity: 0 }}
       >
         <a
-          href="https://wa.me/+966569088789"
+          aria-label="اتصل بنا الآن"
+          href="https://wa.me/+966531955694"
           target="_blank"
           rel="noopener noreferrer"
         >
           <img src="/whatsapp.svg" alt="WhatsApp" className="w-10 h-10" />
         </a>
-        <a href="tel:+966569088789">
+        <a aria-label="اتصل بنا الآن" href="tel:+966531955694">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

@@ -3,7 +3,6 @@ import "./globals.css";
 import { Cairo, Tajawal } from "next/font/google";
 import Navbar from "@/components/header/Navbar";
 import Footer from "@/sections/Footer";
-import img from "../public/Finishes/5.webp";
 const cairo = Cairo({
   subsets: ["arabic"],
   weight: ["600", "700"], // Headings
@@ -17,6 +16,10 @@ const tajawal = Tajawal({
   variable: "--font-body",
   display: "swap",
 });
+const img = {
+  src: "https://last-sepia-eight.vercel.app/logo.png",
+};
+
 export const metadata = {
   title: "شركة المقاولات والبناء في جدة ومكة | بناء عظم وتشطيبات",
   description:
@@ -97,7 +100,7 @@ export const metadata = {
     description:
       "خدمات بناء وتشطيب وترميم وديكورات في جدة ومكة بخبرة طويلة. اتصل بنا الآن للحصول على أفضل الأسعار والجودة.",
     url: "https://last-sepia-eight.vercel.app",
-    siteName: "شركة المقاولات",
+    siteName: "سيف تاورز",
     images: [
       {
         url: img.src,
@@ -117,7 +120,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@saif",
+    site: "@Abdullah1173707", // يمكن حذفه أو تحديثه
     title: "شركة المقاولات والبناء في جدة ومكة",
     description: "خدمات بناء وتشطيب وترميم وديكورات في جدة ومكة. اتصل الآن!",
     images: [img.src],
@@ -135,12 +138,12 @@ export const metadata = {
       maxSnippet: -1,
     },
   },
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
   manifest: "/site.webmanifest",
+  icons: {
+    icon: "/logo.ico",
+    shortcut: "/logo.ico",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -163,22 +166,22 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              name: "شركة المقاولات والبناء",
-              image: "https://example.com/logo.png",
-              "@id": "https://example.com",
-              url: "https://example.com",
+              name: "سيف تاورز",
+              image: "https://last-sepia-eight.vercel.app/logo.png", // تأكد من صحة الرابط
+              "@id": "https://last-sepia-eight.vercel.app",
+              url: "https://last-sepia-eight.vercel.app",
               telephone: "+966501234567",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "حي النسيم",
-                addressLocality: "جدة",
+                streetAddress: "جبل النور - شارع حسين سرحان",
+                addressLocality: "مكة",
                 addressRegion: "مكة المكرمة",
-                postalCode: "21577",
+                postalCode: "21955", // رمز بريدي تقريبي لجبل النور - يمكن تعديله إن وُجد أدق
                 addressCountry: "SA",
               },
               areaServed: [
-                { "@type": "City", name: "جدة" },
                 { "@type": "City", name: "مكة" },
+                { "@type": "City", name: "جدة" },
               ],
               openingHours: "Su,Mo,Tu,We,Th,Sa 08:00-18:00",
             }),
@@ -186,7 +189,7 @@ export default function RootLayout({
         />
       </head>
 
-      <body className={`overflow-x-hidden`}>
+      <body className="overflow-x-hidden">
         <Navbar />
         {children}
         <Footer />

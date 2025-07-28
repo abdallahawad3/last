@@ -5,13 +5,12 @@
   --background: #eafde7;
   --foreground: #01312d;
 
-  /* Custom Green Palette */
-  --color-primary: #002147; /* Dark, deep blue - replaces your dark green */
-  --color-secondary: #2a52be; /* Medium blue - replaces your medium green */
-  --color-accent: #4682b4; /* Steel blue/lighter blue - replaces your brighter green */
-  --color-light: #87cefa; /* Light sky blue - replaces your yellow-green */
-  --color-background: #e0f2f7; /* Very light blue/off-white with a blue tint - replaces your light background */
-
+  --color-primary: #002147; /* الأزرق الداكن: للعناوين والأقسام الرئيسية */
+  --color-secondary: #2a52be; /* الأزرق المتوسط: للأزرار والروابط */
+  --color-accent: #4682b4; /* الأزرق الفاتح/الرمادي: للتفاصيل والهايلت */
+  --color-light: #87cefa; /* الأزرق السماوي: للخلفيات الثانوية */
+  --color-background: #e0f2f7; /* خلفية فاتحة جدًا */
+  --color-foreground: #01312d; /* للنص الداكن أو لو عايز لمسة خضراء داكنة */
   /* Fonts */
   --font-heading: "Cairo", sans-serif;
   --font-body: "Tajawal", sans-serif;
@@ -93,8 +92,7 @@ h1.masked-text {
   font-family: var(--font-heading);
   font-weight: 700;
   text-align: center;
-  background: url("https://i.pinimg.com/1200x/3f/6c/0a/3f6c0abdfac072f6bc5c964182579276.jpg")
-    no-repeat center center;
+  background: url("/mask.png") no-repeat center center;
   background-size: cover;
   letter-spacing: 2;
   line-height: 1.4;
@@ -102,4 +100,61 @@ h1.masked-text {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+}
+
+.about-section {
+  background-image: url("/about_img.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* لون أبيض مع شفافية */
+  }
+}
+.hero-btn {
+  position: relative;
+  overflow: hidden; /* Crucial for containing the expanding element */
+  padding: 12px 24px;
+  background-color: var(--color-secondary); /* Your medium blue for buttons */
+  color: white;
+  font-size: 1.25rem; /* text-xl */
+  font-family: "Your Heading Font", sans-serif; /* Remember to replace with your actual font */
+  border-radius: 1rem; /* rounded-2xl */
+  transition: background-color 0.3s linear, transform 0.3s linear,
+    box-shadow 0.3s linear;
+  cursor: pointer;
+  display: inline-block; /* Ensures proper sizing and interaction */
+  text-decoration: none; /* If it's an <a> tag */
+  z-index: 1; /* Makes sure the button's text stays above the pseudo-element */
+}
+
+.hero-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0; /* Starts with no width */
+  height: 100%; /* Takes full height of the button */
+  background-color: var(--color-primary); /* Lighter blue for the fill */
+  border-radius: 1rem; /* Matches button border-radius for rounded ends */
+  transition: width 0.4s linear; /* Smooth expansion */
+  z-index: -1; /* Puts the fill behind the button text */
+}
+
+.hero-btn:hover {
+  background-color: var(--color-secondary); /* Darker blue on hover */
+  transform: scale(1.05); /* Slight scale up for an interactive feel */
+  box-shadow: 0 6px 12px rgba(0, 33, 71, 0.3); /* Adds a subtle shadow on hover */
+}
+
+.hero-btn:hover::before {
+  width: 100%; /* Expands to full width */
 }

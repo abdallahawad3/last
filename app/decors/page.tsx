@@ -250,21 +250,31 @@ export const metadata = {
 const page = () => {
   return (
     <main>
-      <div className="text-center bg-primary text-light py-20 md:pb-40 md:pt-52">
+      <div className="text-center bg-primary text-light py-32 md:pb-40 md:pt-52">
         <h1 className="masked-text text-2xl md:text-5xl font-bold mb-4">
           ديكورات
         </h1>
-        <p className="text-lg  max-w-[70%] mx-auto ">
-          تقوم مؤسسنقدم خدمات الديكورات الداخلية والخارجية لتحويل المساحات إلى
-          أماكن مبهرة وفريدة من نوعها. تشمل خدماتنا تصميم وتركيب الديكورات
-          الجبسية، وتنسيق الألوان، واختيار الأثاث والإضاءة، وتقديم حلول مبتكرة
-          تلبي رغبات العملاء. نعمل على تحقيق التوازن بين الجمال والوظيفة
-          باستخدام أفضل المواد وأحدث التقنيات.
+        <p className="text-lg max-w-[70%] mx-auto leading-relaxed text-background">
+          تقدم <strong className="text-secondary">سيف تاورز</strong> خدمات
+          <strong> الديكورات الداخلية والخارجية</strong> لتحويل المساحات إلى
+          أماكن مبهرة وفريدة من نوعها. تشمل خدماتنا{" "}
+          <strong>
+            {" "}
+            تصميم وتركيب الديكورات الجبسية، تنسيق الألوان، اختيار الأثاث
+            والإضاءة، وتقديم حلول مبتكرة
+          </strong>{" "}
+          تلبي رغبات العملاء. نعمل على تحقيق{" "}
+          <strong>التوازن بين الجمال والوظيفة</strong> باستخدام أفضل المواد
+          وأحدث التقنيات.
         </p>
         <div className="flex justify-center mt-4">
-          <button className="flex items-center text-green-600 font-heading hover:underline transition-all bg-green-50 px-4 py-2 rounded-lg hover:bg-green-100">
+          <button
+            aria-label="اتصل الآن"
+            className="flex items-center text-green-600 font-heading hover:underline transition-all bg-green-50 px-4 py-2 rounded-lg hover:bg-green-100"
+          >
             <a
-              href={`tel:+966569088789`}
+              aria-label="اتصل بنا الآن"
+              href={`tel:+966531955694`}
               target="_blank"
               rel="noopener noreferrer"
             >

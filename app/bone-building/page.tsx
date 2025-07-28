@@ -122,21 +122,31 @@ export const metadata = {
 const page = () => {
   return (
     <main>
-      <div className="text-center bg-primary text-light py-20 md:pb-40 md:pt-52">
+      <div className="text-center bg-primary text-light py-32 md:pb-40 md:pt-52">
         <h1 className="masked-text text-2xl md:text-5xl font-bold mb-4">
           بناء عظم
         </h1>
-        <p className="text-lg md:text-2xl max-w-[70%] mx-auto ">
-          تقوم مؤسستنا بتنفيذ أعمال البناء من اشغال العظم والتشطيبات بجوده عاليه
-          وبجميع أعمال البناء والانشاء ابتداءً من اعمال الحفر والردم وإنشاء
-          القواعد وبناء العظم والمباني مثل العمائر, والمنتزهات, الملاحق وكافة
-          أشكال البناء بما يتضمنه من اعمال النجارة المسلحة والتسليح وصب
-          الخرسانات كما نقوم بجميع اعمال العظم بالمواد أو بدونها .
+        <p className="text-lg md:text-2xl max-w-[70%] mx-auto leading-relaxed text-background">
+          تقدم <strong className="text-secondary">سيف تاورز</strong> خدمات
+          متكاملة في
+          <strong> البناء من أشغال العظم والتشطيبات</strong> بجودة عالية، وتشمل
+          جميع مراحل
+          <strong> البناء والإنشاء</strong> ابتداءً من{" "}
+          <strong>أعمال الحفر والردم وإنشاء القواعد</strong>، مرورًا بـ
+          <strong> بناء العظم</strong> للمباني مثل العمائر، المنتزهات، الملاحق،
+          وكافة أشكال البناء. كما يشمل ذلك{" "}
+          <strong> أعمال النجارة المسلحة، التسليح، وصب الخرسانات</strong>. ونوفر
+          أيضًا جميع <strong>أعمال العظم بالمواد أو بدونها</strong> حسب رغبة
+          العميل.
         </p>
         <div className="flex justify-center mt-4">
-          <button className="flex items-center text-green-600 font-heading hover:underline transition-all bg-green-50 px-4 py-2 rounded-lg hover:bg-green-100">
+          <button
+            aria-label="اتصل الآن"
+            className="flex items-center text-green-600 font-heading hover:underline transition-all bg-green-50 px-4 py-2 rounded-lg hover:bg-green-100"
+          >
             <a
-              href={`tel:+966569088789`}
+              aria-label="اتصل بنا الآن"
+              href={`tel:+966531955694`}
               target="_blank"
               rel="noopener noreferrer"
             >

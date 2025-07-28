@@ -12,19 +12,13 @@ export default function Home() {
 
   return (
     <>
-      {loading && <Loader onFinish={() => setLoading(false)} />}
-      {!loading && (
-        <>
-          <Hero />
-          <main className=" ">
-            <OurServices />
-            <AboutUs />
-            <Portfolio />
-            <ContactUs />
-            <HotContact />
-          </main>
-        </>
-      )}
+      <Hero />
+      <main>
+        <OurServices />
+        <AboutUs />
+        <ContactUs />
+        <HotContact />
+      </main>
     </>
   );
 }

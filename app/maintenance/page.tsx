@@ -105,20 +105,28 @@ export const metadata: Metadata = {
 const GalleryPage = () => {
   return (
     <main>
-      <div className="text-center bg-primary text-light py-20 md:pb-40 md:pt-52">
-        <h1 className="masked-text text-2xl md:text-5xl font-bold mb-4">
+      <div className="text-center bg-primary text-light py-32 md:pb-40 md:pt-52">
+        <h1 className="masked-text text-2xl md:text-5xl font-bold mb-6">
           ترميم وصيانة
         </h1>
-        <p className="text-lg  max-w-[70%] mx-auto ">
-          تقوم مؤسستنا بإعمال ترميم والصيانة للمنازل والفلل والمنتزهات والحدائق
-          بكافة أشكالها وانواعها المختلفة كما لدينا القدرة علي تنفيذ جميع إعمال
-          السباكة للمباني الجديدة وعمل الصيانة للمباني القديمة وعمل برامج صيانة
-          دورية بإشراف فريق عمل متكامل من امهر الفنيين والمهندسين.
+        <p className="text-xl max-w-[80%] md:max-w-[60%] mx-auto leading-relaxed text-background">
+          تقدم <strong className="text-secondary">مؤسسة سيف</strong> خدمات
+          متكاملة في{" "}
+          <strong>ترميم وصيانة المنازل والفلل والمنتزهات والحدائق</strong>{" "}
+          بمختلف أشكالها وأنواعها. كما نمتلك القدرة على تنفيذ جميع
+          <strong> أعمال السباكة</strong> للمباني الجديدة، وصيانة المباني
+          القائمة، مع توفير <strong> برامج صيانة دورية</strong> تحت إشراف فريق{" "}
+          <strong className="text-secondary">أمهر الفنيين والمهندسين</strong>{" "}
+          لضمان أعلى مستويات الجودة.
         </p>
         <div className="flex justify-center mt-4">
-          <button className="flex items-center text-green-600 font-heading hover:underline transition-all bg-green-50 px-4 py-2 rounded-lg hover:bg-green-100">
+          <button
+            aria-label="اتصل الآن"
+            className="flex items-center text-green-600 font-heading hover:underline transition-all bg-green-50 px-4 py-2 rounded-lg hover:bg-green-100"
+          >
             <a
-              href={`tel:+966569088789`}
+              aria-label="اتصل بنا الآن"
+              href={`tel:+966531955694`}
               target="_blank"
               rel="noopener noreferrer"
             >

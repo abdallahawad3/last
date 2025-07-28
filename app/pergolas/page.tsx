@@ -91,19 +91,32 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <main>
-      <div className="text-center bg-primary text-light py-20 md:pb-40 md:pt-52">
+      <div className="text-center bg-primary text-light py-32 md:pb-40 md:pt-52">
         <h1 className="masked-text text-2xl md:text-5xl font-bold mb-4">
           البرجولات
         </h1>
-        <p className="text-lg max-w-[70%] mx-auto">
-          نقدم خدمات تصميم وتنفيذ البرجولات لتوفير مساحات خارجية مريحة وجذابة،
-          تشمل خدماتنا البرجولات الخشبية والحديدية وبرجولات اللكسان والقماش
-          ومظلات والجلسات لاماكن الجلسات الخارجية والحدائق والاحواش والسطوح.
+        <p className="text-lg max-w-[70%] mx-auto leading-relaxed text-background">
+          تقدم <strong className="text-secondary">سيف تاورز</strong> خدمات
+          <strong> تصميم وتنفيذ البرجولات</strong> لابتكار مساحات خارجية مريحة
+          وجذابة. تشمل خدماتنا{" "}
+          <strong>
+            {" "}
+            البرجولات الخشبية، الحديدية، برجولات اللكسان والقماش، المظلات،
+            والجلسات
+          </strong>{" "}
+          لمختلف{" "}
+          <strong>أماكن الجلسات الخارجية، الحدائق، الأحواش، والأسطح</strong>.
+          نحرص على الدمج بين <strong>الجودة العالية والتصميم العصري</strong>{" "}
+          لتلبية جميع تطلعات العملاء.
         </p>
         <div className="flex justify-center mt-4">
-          <button className="flex items-center text-green-600 font-heading hover:underline transition-all bg-green-50 px-4 py-2 rounded-lg hover:bg-green-100">
+          <button
+            aria-label="اتصل الآن"
+            className="flex items-center text-green-600 font-heading hover:underline transition-all bg-green-50 px-4 py-2 rounded-lg hover:bg-green-100"
+          >
             <a
-              href={`tel:+966569088789`}
+              aria-label="اتصل بنا الآن"
+              href={`tel:+966531955694`}
               target="_blank"
               rel="noopener noreferrer"
             >

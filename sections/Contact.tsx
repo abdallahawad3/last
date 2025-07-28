@@ -112,15 +112,21 @@ export default function ContactUs() {
   };
 
   return (
-    <section className="contact-section py-20 bg-background text-primary">
+    <section
+      id="contact"
+      className="contact-section py-20 bg-background text-primary"
+    >
       <div className="container mx-auto px-6 text-center !mb-12">
         <SlideIn from="bottom">
-          <h2 className="text-4xl font-heading text-secondary mb-4">
+          <h2 className="text-4xl font-bold font-heading text-secondary mb-4">
             تواصل معنا
           </h2>
         </SlideIn>
         <SlideIn delay={0.1} from="bottom">
-          <p className="text-lg font-body max-w-2xl mx-auto">
+          <p
+            className="text-lg font-body max-w-2xl mx-auto"
+            style={{ fontWeight: 500 }}
+          >
             سواء كنت تبحث عن مقاول لمشروع جديد أو تحتاج إلى خدمات ترميم وصيانة،
             تواصل معنا الآن في جدة ومكة.
           </p>
@@ -182,6 +188,7 @@ export default function ContactUs() {
               ></textarea>
 
               <button
+                aria-label="إرسال الرسالة"
                 type="submit"
                 disabled={loading}
                 className={`w-full font-heading py-3 rounded-lg transition-all ${
@@ -197,14 +204,19 @@ export default function ContactUs() {
             {/* أزرار مباشرة */}
             <div className="flex justify-between items-center mt-6 pt-6 border-t border-gray-200">
               <a
-                href="tel:+966569088789"
+                aria-label="اتصل بنا الآن"
+                href="tel:+966531955694"
                 className="flex items-center text-accent font-heading hover:underline transition-all"
               >
                 📞 اتصل الآن
               </a>
-              <button className="flex items-center text-green-600 font-heading hover:underline transition-all bg-green-50 px-4 py-2 rounded-lg hover:bg-green-100">
+              <button
+                aria-label="فتح واتساب"
+                className="flex items-center text-green-600 font-heading hover:underline transition-all bg-green-50 px-4 py-2 rounded-lg hover:bg-green-100"
+              >
                 <a
-                  href={`https://wa.me/+966569088789`}
+                  aria-label="فتح واتساب مباشر"
+                  href={`https://wa.me/+966531955694`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -218,7 +230,8 @@ export default function ContactUs() {
         {/* خريطة Google */}
         <div className="contact-map rounded-2xl shadow-lg">
           <Link
-            href="https://maps.app.goo.gl/pYot1jcLiQJNybXQ7"
+            aria-label="موقع الشركة في جدة"
+            href="https://maps.app.goo.gl/PrftFhzg5LHMUY2v7?g_st=ipc"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full h-full block group"
