@@ -3,7 +3,7 @@ import "./globals.css";
 import { Cairo, Tajawal } from "next/font/google";
 import Navbar from "@/components/header/Navbar";
 import Footer from "@/sections/Footer";
-import img from "/maintenance/1.webp";
+import img from "/public/maintenance/1.webp";
 const cairo = Cairo({
   subsets: ["arabic"],
   weight: ["600", "700"], // Headings
