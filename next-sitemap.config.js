@@ -10,5 +10,7 @@ module.exports = {
         allow: '/',
       },
     ],
+    sitemap: 'https://last-sepia-eight.vercel.app/sitemap.xml', // ✅ keep this
+    // ⛔️ remove host
   },
 };
