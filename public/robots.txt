@@ -1,4 +1,6 @@
+# *
 User-agent: *
 Allow: /
 
+# Sitemaps
 Sitemap: https://last-sepia-eight.vercel.app/sitemap.xml

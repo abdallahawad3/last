@@ -3,6 +3,7 @@ module.exports = {
   siteUrl: 'https://last-sepia-eight.vercel.app',
   generateRobotsTxt: true,
   outDir: './public',
+  host: undefined, // ⛔️ prevents adding the Host line
   robotsTxtOptions: {
     policies: [
       {
@@ -10,7 +11,6 @@ module.exports = {
         allow: '/',
       },
     ],
-    sitemap: 'https://last-sepia-eight.vercel.app/sitemap.xml', // ✅ keep this
-    // ⛔️ remove host
+    sitemap: 'https://last-sepia-eight.vercel.app/sitemap.xml',
   },
 };
