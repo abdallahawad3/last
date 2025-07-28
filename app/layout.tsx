@@ -168,6 +168,10 @@ export default function RootLayout({
       className={`${cairo.variable} ${tajawal.variable} overflow-x-hidden`}
     >
       <head>
+        <meta
+          name="google-site-verification"
+          content="Jx1E_lNm6JjmcGWfUUiC0eWdAcYP6bJEaJRWEAvAdOM"
+        />
         {/* PWA Manifest */}
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#0d9488" />

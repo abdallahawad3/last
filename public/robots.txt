@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://last-sepia-eight.vercel.app
+
+# Sitemaps
+Sitemap: https://last-sepia-eight.vercel.app/sitemap.xml
